@@ -244,7 +244,7 @@ const ScrollableTabView = createReactClass({
     } else {
       const scenes = this._composeScenes();
       return <AnimatedViewPagerAndroid
-        key={this._children().length}
+        key={this.state.sceneKeys.join(',')}
         style={styles.scrollableContentAndroid}
         initialPage={this.props.initialPage}
         onPageSelected={this._updateSelectedPage}
